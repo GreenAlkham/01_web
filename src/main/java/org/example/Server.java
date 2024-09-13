@@ -18,10 +18,10 @@ import java.io.InputStreamReader;
 
 public class Server {
 
-    final List<String> validPaths = List.of("/index.html", "/spring.svg", "/spring.png", "/resources.html",
+    private final List<String> validPaths = List.of("/index.html", "/spring.svg", "/spring.png", "/resources.html",
             "/styles.css", "/app.js", "/links.html", "/forms.html", "/classic.html", "/events.html", "/events.js");
-    final ExecutorService executorService = Executors.newFixedThreadPool(64);
-    public final ConcurrentHashMap<String, Map<String, org.example.Handler>> handlers;
+    private final ExecutorService executorService = Executors.newFixedThreadPool(64);
+    private final ConcurrentHashMap<String, Map<String, org.example.Handler>> handlers;
 
     public Server() {
         handlers = new ConcurrentHashMap<>();

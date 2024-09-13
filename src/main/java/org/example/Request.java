@@ -4,9 +4,9 @@ import java.util.List;
 
 public class Request {
     //    метод запроса, потому что на разные методы можно назначить один и тот же хендлер;
-    public String method;
-    public String path;
-    List<String> headers;
+    private String method;
+    private String path;
+    private List<String> headers;
 
     private static final byte[] requestLineDelimiter = new byte[]{'\r', '\n'};
 
